@@ -13,3 +13,15 @@ git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_players_row.inc -- Web/
 git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_players.html -- Web/ServerAdmin/current_players.html > patches/Web/ServerAdmin/current_players.html.patch
 git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_player_row.inc -- Web/ServerAdmin/current_player_row.inc > patches/Web/ServerAdmin/current_player_row.inc.patch
 git diff --relative $SEED_COMMIT:Web/ServerAdmin/current.html -- Web/ServerAdmin/current.html > patches/Web/ServerAdmin/current.html.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/header.inc -- Web/ServerAdmin/header.inc > patches/Web/ServerAdmin/header.inc.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/gamesummary.js -- Web/ServerAdmin/gamesummary.js > patches/Web/ServerAdmin/gamesummary.js.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_change.html -- Web/ServerAdmin/current_change.html > patches/Web/ServerAdmin/current_change.html.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_chat.html -- Web/ServerAdmin/current_chat.html > patches/Web/ServerAdmin/current_chat.html.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_chat_frame.html -- Web/ServerAdmin/current_chat_frame.html > patches/Web/ServerAdmin/current_chat_frame.html.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_chat_frame.inc -- Web/ServerAdmin/current_chat_frame.inc > patches/Web/ServerAdmin/current_chat_frame.inc.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/default_maplist_editor.inc -- Web/ServerAdmin/default_maplist_editor.inc > patches/Web/ServerAdmin/default_maplist_editor.inc.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/gamesummary_base.inc -- Web/ServerAdmin/gamesummary_base.inc > patches/Web/ServerAdmin/gamesummary_base.inc
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/login.html -- Web/ServerAdmin/login.html > patches/Web/ServerAdmin/login.html.patch
+git diff --relative $SEED_COMMIT:Web/ServerAdmin/current_rules_kfgameinfo_survival.inc -- Web/ServerAdmin/current_rules_kfgameinfo_survival.inc > patches/Web/ServerAdmin/current_rules_kfgameinfo_survival.inc.patch
+git diff --relative $SEED_COMMIT:Web/images/kf2.css -- Web/images/kf2.css > patches/Web/images/kf2.css.patch
+git diff --relative $SEED_COMMIT:Web/images/gamesummary.js -- Web/images/gamesummary.js > patches/Web/images/gamesummary.js.patch
