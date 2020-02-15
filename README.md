@@ -1,5 +1,5 @@
 # KF2 Web Admin Grimoire
-Generates KF2 Server patches for KF2 Magicked Admin and other popular admin panel modifications.
+WIP Killing Floor 2 server mod manager.
 
 ## Features
 
@@ -15,17 +15,24 @@ The main purpose of this is to add support for KF2 Magicked Admin in all other g
 * Addition of a tooltip for each column in "Players"
 * Allows you to modify and apply the changes made to the .css files in the folder /images
 
+### Future
+
+* Custom map installation
+* Multi-server navigation
+* 
+
 ## Requirements
 
 * Git
+* Python 3.x
 
 ## Usage
 
-Running `gen-patches.sh` will compare the first commit in this repo with the last
-and generate patches that apply the difference for the files in `ServerAdmin`. The
-patches are output be output in a `patches` folder.
+Running `gen-patches.sh` will compare the most recent seed commit in this repo with the latest
+and generate patches that apply the difference for the files in `Web`. The
+patches are output in the `patches` folder.
 
-The generated patches can be copied into KF2 Magicked Admin's `admin-patcher/patches`
+The generated patches can be copied into the `admin-patcher/patches`
 folder to apply them with the admin-patcher or applied manually with `git am`.
 
 ## License
