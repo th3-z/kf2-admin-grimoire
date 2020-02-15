@@ -1,10 +1,10 @@
 try {
-  $('#notectrl').hide();
+  $('#notectrl').visible();
 }
 catch (e) {};
 
 $(document).ready(function(){
-    $('#notectrl').hide();
+    $('#notectrl').visible();
      // bug in sortedtable causes a javascript error when the table is empty.
     if ($("#players td").size() > 1) {
         $("#players th a").each(function(){

@@ -4,47 +4,76 @@
 
 <%news%>
 
-<fieldset id="notesField" title="Here you can leave some notes. They will be stored on the server so other administrators can see and edit them.">
-<legend>Notes</legend>
+<table width="59%" id="currentinfo2">
+<colgroup>
+    <col width="100%"/>
+</colgroup>
+<td>
+<h3 title="Affiche la liste et le classement de tout les joueurs presents dans la partie.">Joueurs</h3>
+<div class="section narrow">
+<table id="players" class="grid" width="100%">
+<thead>
+<tr>
+    <th title="No idea what this can do well for.">&#160;</th>
+    <th title="The player's pseudonym."><a href="<%page.fulluri%>?sortby=name&amp;reverse=<%reverse.name%>" class="sortable <%sorted.name%>">Name</a></th>
+    <th title="The class currently used by the player."><a href="<%page.fulluri%>?sortby=perk&amp;reverse=<%reverse.perk%>" class="sortable <%sorted.perk%>">Perk</th>
+    <th title="The level of the class used by the player.">Level</th>
+    <th title="Indicates the amount of dosh the player currently has."><a href="<%page.fulluri%>?sortby=score&amp;reverse=<%reverse.score%>" class="sortable <%sorted.score%>">Dosh</a></th>
+    <th title="Displays the player's health.">Health</th>
+    <th title="Indicates how much the player has killed ZEDs."><a href="<%page.fulluri%>?sortby=kills&amp;reverse=<%reverse.kills%>" class="sortable <%sorted.kills%>">Kills</a></th>
+    <th title="This is the response time in milliseconds from the player to the game server."><a href="<%page.fulluri%>?sortby=ping&amp;reverse=<%reverse.ping%>" class="sortable <%sorted.ping%>">Ping</a></th>
+    <th title="Indicates if the player has administrator status.">Admin</th>
+</tr>
+</thead>
+<tbody>
+<%players%>
+</tbody>
+</table>
+<%spectators%>
+</div>
+</td>
+</table>
+
+<fieldset id="notesField" style="width:40%;" title="Here you can leave some notes. They will be stored on the server so other administrators can see and edit them.">
+<legend><button type="submit" title="Click on this button for saving your notes." name="action" value="Save">Save Notes</button></legend>
 <form action="<%page.fulluri%>" method="post" id="notesForm">
 <div>
 <textarea id="notes" name="notes" rows="5" cols="80" style="width:100%;"><%notes%></textarea>
 </div>
 <div id="notectrl">
-<button type="submit" name="action" value="save">Save</button>
+
 </div>
 </form>
 </fieldset>
 
-<table width="100%" id="currentinfo">
+<table width="40%" id="currentinfo">
 <colgroup>
-    <col width="25%"/>
-    <col width="25%"/>
+    <col width="50%"/>
     <col width="50%"/>
 </colgroup>
+
 <tr>
+
 <td>
-
-<h3>Current Game</h3>
-
+<h3 title="Displays information about the current game.">Current Game</h3>
 <div class="section">
 <dl id="currentGame">
-    <dt>Server Name</dt>
+    <dt title="The name of the server that appears when players join it in game.">Server Name</dt>
     <dd><%server.name%></dd>
-    <dt>Cheat Protection</dt>
+    <dt title="Indicates whether the anti-cheat protection is activated or not.">Cheat Protection</dt>
     <dd><%server.anticheat%></dd>
-    <dt>Game type</dt>
-    <dd title="<%game.type%>"><%game.name%></dd>
-    <dt>Map</dt>
-    <dd title="<%map.name%>"><%map.title.safe%></dd>
-    <dt>Mutators</dt>
+    <dt title="Indicates the game mode currently in progress on this game.">Game type</dt>
+    <dd <%game.type%>><%game.name%></dd>
+    <dt title="Displays which card is currently in use.">Map</dt>
+    <dd <%map.name%>><%map.title.safe%></dd>
+    <dt title="This is the list of mutators that affect this part.">Mutators</dt>
     <dd><%rules.mutators%></dd>
 </dl>
 </div>
 </td>
-<td>
 
-<h3>Rules</h3>
+<td>
+<h3 title="The list of server rules.">Rules</h3>
 <div class="section">
 <dl id="currentRules">
 <%rules%>
@@ -52,33 +81,11 @@
 </div>
 </td>
 
-<td>
-<h3>Players</h3>
-<div class="section narrow">
-<table id="players" class="grid" width="100%">
-<thead>
-<tr>
-    <th>&#160;</th>
-    <th><a href="<%page.fulluri%>?sortby=name&amp;reverse=<%reverse.name%>" class="sortable <%sorted.name%>">Name</a></th>
-    <th><a href="<%page.fulluri%>?sortby=perk&amp;reverse=<%reverse.perk%>" class="sortable <%sorted.perk%>">Perk</th>
-    <th>Level</th>
-    <th><a href="<%page.fulluri%>?sortby=score&amp;reverse=<%reverse.score%>" class="sortable <%sorted.score%>">Dosh</a></th>
-    <th>Health</th>
-    <th><a href="<%page.fulluri%>?sortby=kills&amp;reverse=<%reverse.kills%>" class="sortable <%sorted.kills%>">Kills</a></th>
-    <th><a href="<%page.fulluri%>?sortby=ping&amp;reverse=<%reverse.ping%>" class="sortable <%sorted.ping%>">Ping</a></th>
-    <th>Admin</th>
 </tr>
-</thead>
-<tbody>
-<%players%>
-</tbody>
+
 </table>
 
-<%spectators%>
-</div>
-</td>
-</tr>
-</table>
+
 
 
 <script type="text/javascript">
@@ -86,7 +93,7 @@
 var pageUri = '<%page.fulluri%>';
 //]]>
 </script>
-<script type="text/javascript" src="/images/current.js?gzip"></script>
+<script type="text/javascript" src="/images/current.js"></script>
 
 </div>
 

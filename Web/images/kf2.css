@@ -1341,7 +1341,8 @@ body.chatframe #autoupdatechatdiv {
 }
 
 table#currentinfo {
-	border-collapse: separate;	
+	border-collapse: separate;
+	float: left;
 }
 
 table#currentinfo td {
@@ -1350,6 +1351,23 @@ table#currentinfo td {
 
 table#currentinfo td:last-child {
 	border: none;
+}
+
+table#currentinfo2 {
+	border-collapse: separate;	
+	float: right;
+}
+
+table#currentinfo2 td {
+	border-right: 20px solid transparent;
+}
+
+table#currentinfo2 td:last-child {
+	border: none;
+}
+
+fieldset#notesField {
+	width:40%;
 }
 
 div.section {
