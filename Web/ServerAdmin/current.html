@@ -9,12 +9,12 @@
     <col width="100%"/>
 </colgroup>
 <td>
-<h3 title="Displays the list and ranking of all the players present in the game.">Joueurs</h3>
+<h3 align="center" title="Displays the list and ranking of all the players present in the game.">Joueurs</h3>
 <div class="section narrow">
 <table id="players" class="grid" width="100%">
 <thead>
 <tr>
-    <th title="No idea what this can do well for.">&#160;</th>
+    <th title="Invisible column allowing to align the corresponding information under the other columns.">&#160;</th>
     <th title="The player's pseudonym."><a href="<%page.fulluri%>?sortby=name&amp;reverse=<%reverse.name%>" class="sortable <%sorted.name%>">Name</a></th>
     <th title="The class currently used by the player."><a href="<%page.fulluri%>?sortby=perk&amp;reverse=<%reverse.perk%>" class="sortable <%sorted.perk%>">Perk</th>
     <th title="The level of the class used by the player.">Level</th>
@@ -35,7 +35,7 @@
 </table>
 
 <fieldset id="notesField" style="width:40%;" title="Here you can leave some notes. They will be stored on the server so other administrators can see and edit them.">
-<legend><button type="submit" title="Click on this button for saving your notes." name="action" value="Save">Save Notes</button></legend>
+<legend align="center"><button type="submit" title="Click on this button for saving your notes." name="action" value="Save">Save Notes</button></legend>
 <form action="<%page.fulluri%>" method="post" id="notesForm">
 <div>
 <textarea id="notes" name="notes" rows="5" cols="80" style="width:100%;"><%notes%></textarea>
@@ -55,27 +55,27 @@
 <tr>
 
 <td>
-<h3 title="Displays information about the current game.">Current Game</h3>
+<h3 align="center" title="Displays information about the current game.">Current Game</h3>
 <div class="section">
 <dl id="currentGame">
-    <dt title="The name of the server that appears when players join it in game.">Server Name</dt>
-    <dd><%server.name%></dd>
-    <dt title="Indicates whether the anti-cheat protection is activated or not.">Cheat Protection</dt>
-    <dd><%server.anticheat%></dd>
-    <dt title="Indicates the game mode currently in progress on this game.">Game type</dt>
-    <dd <%game.type%>><%game.name%></dd>
-    <dt title="Displays which card is currently in use.">Map</dt>
-    <dd <%map.name%>><%map.title.safe%></dd>
-    <dt title="This is the list of mutators that affect this part.">Mutators</dt>
-    <dd><%rules.mutators%></dd>
+    <dt align="center" title="The name of the server that appears when players join it in game.">Server Name</dt>
+    <dd align="center" ><%server.name%></dd>
+    <dt align="center" title="Indicates whether the anti-cheat protection is activated or not.">Cheat Protection</dt>
+    <dd align="center" ><%server.anticheat%></dd>
+    <dt align="center" title="Indicates the game mode currently in progress on this game.">Game type</dt>
+    <dd align="center" <%game.type%>><%game.name%></dd>
+    <dt align="center" title="Displays which card is currently in use.">Map</dt>
+    <dd align="center" <%map.name%>><%map.title.safe%></dd>
+    <dt align="center" title="This is the list of mutators that affect this part.">Mutators</dt>
+    <dd align="center" ><%rules.mutators%></dd>
 </dl>
 </div>
 </td>
 
 <td>
-<h3 title="The list of server rules.">Rules</h3>
-<div class="section">
-<dl id="currentRules">
+<h3 align="center" title="The list of server rules.">Rules</h3>
+<div align="center" class="section">
+<dl align="center" id="currentRules">
 <%rules%>
 </dl>
 </div>
